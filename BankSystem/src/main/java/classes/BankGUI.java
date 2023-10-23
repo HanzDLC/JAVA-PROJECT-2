@@ -9,7 +9,7 @@ package classes;
  * @author KuchiChai
  */
 public class BankGUI extends javax.swing.JFrame {
-    private double balance = 150000;
+    private double balance = 10000;
     /**
      * Creates new form BankGUI
      */
@@ -49,6 +49,39 @@ public class BankGUI extends javax.swing.JFrame {
             }
         }
      }
+    public void deposit(double amount)
+    {
+        if(amount < 0)
+        {
+            System.out.println("Invalid Amount");
+        }
+        else 
+        {
+            if (amount > this.balance)
+            {
+                System.out.println("Insufficient funds");
+            }
+            else
+            {
+                if(amount%100 != 0)
+                {
+                    System.out.println("Cannot add. It can only add"
+                            + " money that are divisible by 100");
+                }
+                else 
+                {
+                    this.balance = this.balance + amount;
+                    System.out.println("Successful Transaction");
+                }
+                    
+            }
+        }
+     }
+    public void fastcash(double amount){
+        this.balance = this.balance - amount;
+        System.out.println("Successful Transaction");
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -87,8 +120,13 @@ public class BankGUI extends javax.swing.JFrame {
 
         FCbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         FCbtn.setText("Fast Cash");
+        FCbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FCbtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(FCbtn);
-        FCbtn.setBounds(340, 360, 170, 60);
+        FCbtn.setBounds(340, 360, 190, 60);
 
         BIbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         BIbtn.setText("Balance Inquiry");
@@ -98,17 +136,17 @@ public class BankGUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BIbtn);
-        BIbtn.setBounds(60, 170, 170, 60);
+        BIbtn.setBounds(50, 170, 200, 60);
 
         CPbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         CPbtn.setText("Change PIN");
         jPanel1.add(CPbtn);
-        CPbtn.setBounds(60, 260, 170, 60);
+        CPbtn.setBounds(50, 260, 200, 60);
 
         Dbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Dbtn.setText("Developer");
         jPanel1.add(Dbtn);
-        Dbtn.setBounds(60, 360, 170, 60);
+        Dbtn.setBounds(50, 360, 200, 60);
 
         Wbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Wbtn.setText("Withdraw");
@@ -118,18 +156,22 @@ public class BankGUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Wbtn);
-        Wbtn.setBounds(340, 170, 170, 60);
+        Wbtn.setBounds(340, 170, 190, 60);
 
         Depbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Depbtn.setText("Deposit");
+        Depbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DepbtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(Depbtn);
-        Depbtn.setBounds(340, 260, 170, 60);
+        Depbtn.setBounds(340, 260, 190, 60);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, -10, 600, 600);
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BIbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BIbtnActionPerformed
@@ -139,6 +181,15 @@ public class BankGUI extends javax.swing.JFrame {
     private void WbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WbtnActionPerformed
         new Withdraw(BankGUI.this).setVisible(true);
     }//GEN-LAST:event_WbtnActionPerformed
+
+    private void DepbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepbtnActionPerformed
+        new Deposit(BankGUI.this).setVisible(true);
+                
+    }//GEN-LAST:event_DepbtnActionPerformed
+
+    private void FCbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FCbtnActionPerformed
+        new FastCash(BankGUI.this).setVisible(true);
+    }//GEN-LAST:event_FCbtnActionPerformed
 
     /**
      * @param args the command line arguments

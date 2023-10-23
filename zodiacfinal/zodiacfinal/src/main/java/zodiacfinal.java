@@ -31,7 +31,6 @@ public class zodiacfinal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         calculate = new javax.swing.JButton();
@@ -39,17 +38,11 @@ public class zodiacfinal extends javax.swing.JFrame {
         mthTF = new javax.swing.JTextField();
         dayTF = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 300));
         getContentPane().setLayout(null);
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ZODIAC SIGN");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(140, 20, 118, 25);
 
         jLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,6 +107,15 @@ public class zodiacfinal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.setLayout(null);
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ZODIAC SIGN");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(140, 30, 150, 25);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 400, 300);
 
