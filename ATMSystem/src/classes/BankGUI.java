@@ -203,7 +203,8 @@ public class BankGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_CPbtnActionPerformed
 
     private void DbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DbtnActionPerformed
-        // TODO add your handling code here:
+        new Developer().setVisible(true);
+                
     }//GEN-LAST:event_DbtnActionPerformed
 
     /**

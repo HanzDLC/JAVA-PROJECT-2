@@ -27,6 +27,7 @@ public class Developer extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        BackBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -34,6 +35,7 @@ public class Developer extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 500));
@@ -41,6 +43,16 @@ public class Developer extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 0));
         jPanel1.setForeground(new java.awt.Color(0, 51, 0));
         jPanel1.setLayout(null);
+
+        BackBtn.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BackBtn.setText("BACK");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BackBtn);
+        BackBtn.setBounds(390, 310, 100, 50);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
@@ -72,7 +84,11 @@ public class Developer extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(110, 160, 258, 110);
+        jScrollPane1.setBounds(130, 170, 250, 98);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/finalimage (2).jpg"))); // NOI18N
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(130, 220, 330, 240);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +105,10 @@ public class Developer extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_BackBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,11 +147,13 @@ public class Developer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

@@ -39,7 +39,7 @@ public class Withdraw extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 600));
+        setPreferredSize(new java.awt.Dimension(500, 500));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 0));
