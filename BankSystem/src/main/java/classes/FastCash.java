@@ -34,7 +34,7 @@ public class FastCash extends javax.swing.JFrame {
         Btn1000 = new javax.swing.JButton();
         CancelBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 0));
         jPanel1.setForeground(new java.awt.Color(0, 51, 0));
@@ -114,11 +114,11 @@ public class FastCash extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn100ActionPerformed
 
     private void Btn10000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn10000ActionPerformed
-        // TODO add your handling code here:
+        main.fastcash(10000);
     }//GEN-LAST:event_Btn10000ActionPerformed
 
     private void Btn1000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1000ActionPerformed
-        // TODO add your handling code here:
+        main.fastcash(1000);
     }//GEN-LAST:event_Btn1000ActionPerformed
 
     private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed

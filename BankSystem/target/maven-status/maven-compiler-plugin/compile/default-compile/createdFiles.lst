@@ -3,6 +3,7 @@ classes\Withdraw$1.class
 com\mycompany\banksystem\BankSystem.class
 classes\ChangePin$1.class
 classes\BalanceInquiry.class
+classes\BankGUI$6.class
 classes\BankGUI$1.class
 classes\Deposit.class
 classes\ChangePin$3.class
@@ -16,6 +17,7 @@ classes\Withdraw$2.class
 classes\BalanceInquiry$1.class
 classes\Deposit$1.class
 classes\BankGUI$5.class
+classes\FastCash$4.class
 classes\BankGUI.class
 classes\ChangePin$2.class
 classes\FastCash.class

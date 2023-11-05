@@ -140,11 +140,21 @@ public class BankGUI extends javax.swing.JFrame {
 
         CPbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         CPbtn.setText("Change PIN");
+        CPbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CPbtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(CPbtn);
         CPbtn.setBounds(50, 260, 200, 60);
 
         Dbtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Dbtn.setText("Developer");
+        Dbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DbtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(Dbtn);
         Dbtn.setBounds(50, 360, 200, 60);
 
@@ -190,6 +200,14 @@ public class BankGUI extends javax.swing.JFrame {
     private void FCbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FCbtnActionPerformed
         new FastCash(BankGUI.this).setVisible(true);
     }//GEN-LAST:event_FCbtnActionPerformed
+
+    private void CPbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPbtnActionPerformed
+        new ChangePin().setVisible(true);
+    }//GEN-LAST:event_CPbtnActionPerformed
+
+    private void DbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DbtnActionPerformed
 
     /**
      * @param args the command line arguments
